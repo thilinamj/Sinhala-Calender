@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+h1,h3,h2{
+margin:0;
+}
+
+.body{
+width:50%
+;}
+
+.sinhala-cal-container {
+
+    border-top: 1px solid #0A246A;
+    text-align: center;
+    padding-top:5px;
+	font-weight:200px;
+	margin:1px solid #3998c3;    
+	font-family: NotoSerifSinhala-Regular;
+	background-color:#f5f5f5;
+	border-radius:5px;	
+    }
+	
+#month{
+    background-color: #018aa3;
+    color: white;
+    padding: 10px 0;
+	font-size:40px;
+}
+
+#date{
+	font-size:104px;
+	margin:0;
+	color:#018aa3;
+	font-family: sans-serif;
+	font-weight: 400;
+}
+
+h3{
+	font-size: 30px !important;
+	margin-bottom:5px;
+	color:#828282 !important;
+	font-family: sans-serif;	
+}
+
+.cal-header{
+
+	font-size:45px;
+}
+
+h4{
+	font-size: 20px;
+	margin:0;
+}
+#year{
+
+	color:#828282 !important;
+	font-family: monospace;
+	font-size:40px;
+	font-weight:600;
+}
+
+.cal-body{
+	background-color:white;
+}
+
+.cal-yaer{
+
+	display:inline-flex;
+
+}
+
+.datename{
+	color:#828282 !important;
+	font-size:45px ;
+	font-weight: 100;
+}
+.datename-normal{
+	color:#828282 !important;
+	font-size:30px;
+	margin-top:-10px;
+	font-weight: 100;
+	font-family: NotoSerifSinhala-Regular, Arial, Helvetica, sans-serif;
+}
+
+.cal-footer{
+margin-bottom:20px;
+margin-top:-15px;
+}
+
+
+  
+</style>
+</head>
+
+<body>
+
+<div class = sinhala-cal-container>
+<h3> <span class="cal-header">අද </span>ශ්‍රී බුද්ධ වර්ෂ</h3>
+
+
+<div class="cal-yaer">
+<h1 id='year'>year </h1> <h3> &nbsp ක් වූ</h3>
+</div>
+<h2 id='month'>month</h2>
+<div class='cal-body'>
+<h1 id='date'>date</h1>
+
+<div class ='cal-footer'>
+<span id='datename' class='datename'>datename</span>
+<h2 id='datenamenormal' class='datename-normal'>datenamenoramal</h2>
+</div>
+</div>
+</div>
+
+<script>
+<!-- Begin
+var now = new Date();
+var days = new Array('රවි දින','සඳු දින ','කුජ දින','බුධ දින','ගුරු දින','සිකුරු දින','ශනි දින');
+var daysnormal = new Array('(ඉරිදා)','(සඳුදා)','(අගහරුවාදා)','(බදාදා)','(බ්‍රහස්පතින්දා)','(සිකුරාදා)','(සෙනසුරාදා)');
+var months = new Array('දුරුතු මස','නවම් මස','මැදින් මස','බක් මස','වෙසක් මස','පොසොන් මස','ඇසළ මස','නිකිණි මස','බිනර මස','වප් මස','ඉල් මස','උඳුවප් මස');
+var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+var d = new Date();
+ var n = d.getFullYear() + 544;
+
+ 
+function fourdigits(number) {
+    return (number < 1000) ? number + 1900 : number;
+}
+
+ 
+today =  days[now.getDay()] + ", " +
+         months[now.getMonth()] + " " +
+         date + ", " +
+         (fourdigits(now.getYear())) ;
+document.getElementById('month').innerHTML = months[now.getMonth()];
+document.getElementById('date').innerHTML = date;
+document.getElementById('datename').innerHTML = days[now.getDay()];
+document.getElementById('datenamenormal').innerHTML = daysnormal[now.getDay()];
+document.getElementById("year").innerHTML = n;
+//  End -->
+</script>
+</body>
+</html> 
